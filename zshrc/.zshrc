@@ -3,10 +3,11 @@ export EDITOR='nano'
 
 ZSH_THEME="robbyrussell"
 
+source $HOME/.config/zshrc/plugins.zsh
+
 source $ZSH/oh-my-zsh.sh
 
-source $ZSH_CUSTOM/plugins.zsh
-source $ZSH_CUSTOM/modules.zsh
+source $HOME/.config/zshrc/modules.zsh
 
 # installed programs specific configuration
-[ -f $ZSH_CUSTOM/programs.zsh ] && source $ZSH_CUSTOM/programs.zsh
+[ -f $HOME/.config/zshrc/programs.zsh ] && source $HOME/.config/zshrc/programs.zsh
