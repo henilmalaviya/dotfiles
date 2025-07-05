@@ -1,0 +1,100 @@
+{
+  "position": "bottom",
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    ""
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock",
+    "custom/caffeine",
+    "custom/bluetooth",
+    "backlight",
+    "custom/notifications",
+    "tray"
+  ],
+  "clock": {
+    "format": "<span foreground='#f5c2e7' size='10000' > </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 15
+    },
+    "format": "<span size='10000' foreground='#a6e3a1'>{icon} </span>{capacity}%",
+    "format-warning": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{capacity}%",
+    "format-critical": "<span size='10000' foreground='#E38C8F'>{icon} </span>{capacity}%",
+    "format-charging": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-plugged": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-alt": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{time}",
+    "format-full": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "<span size='10000' foreground='#f5e0dc'>  </span>{essid}",
+    "format-ethernet": "<span size='10000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='10000' foreground='#f5e0dc'></span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  },
+  "pulseaudio": {
+    "format": "<span size='10000' >{icon} </span>{volume}%",
+    "format-muted": " ",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "  {}%"
+  },
+  "backlight": {
+    "format": "{icon}{percent}%",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "custom/notifications": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "swaync-client -t"
+  },
+  "custom/bluetooth": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "blueberry"
+  }
+}
