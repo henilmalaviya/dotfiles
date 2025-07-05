@@ -8,6 +8,7 @@ source $HOME/.config/zshrc/plugins.zsh
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.config/zshrc/modules.zsh
+source $HOME/.config/zshrc/aliases.zsh
 
 # installed programs specific configuration
 [ -f $HOME/.config/zshrc/programs.zsh ] && source $HOME/.config/zshrc/programs.zsh
