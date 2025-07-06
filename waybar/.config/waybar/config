@@ -7,15 +7,17 @@
     ""
   ],
   "modules-right": [
+    "custom/net_speed",
     "cpu",
     "memory",
+    "backlight",
     "network",
     "pulseaudio",
     "battery",
+    "custom/powerprofile",
     "clock",
     "custom/caffeine",
     "custom/bluetooth",
-    "backlight",
     "custom/notifications",
     "tray"
   ],
@@ -93,8 +95,23 @@
     "on-click": "swaync-client -t"
   },
   "custom/bluetooth": {
-    "format": " ",
-    "tooltip": false,
+    "format": "{} ",
+    "return-type": "json",
+    "interval": 5,
+    "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
     "on-click": "blueberry"
+  },
+  "custom/powerprofile": {
+    "format": "{} ",
+    "return-type": "json",
+    "signal": 9,
+    "exec": "~/.config/waybar/scripts/powerprofile_status.sh",
+    "on-click": "~/.config/waybar/scripts/powerprofile_toggle.sh && pkill -SIGRTMIN+9 waybar"
+  },
+  "custom/net_speed": {
+    "format": "{}",
+    "return-type": "json",
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/net_speed.sh"
   }
 }
