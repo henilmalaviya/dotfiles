@@ -51,7 +51,8 @@
     "format-ethernet": "<span size='10000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='10000' foreground='#f5e0dc'></span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click": "nmtui"
   },
   "pulseaudio": {
     "format": "<span size='10000' >{icon} </span>{volume}%",
