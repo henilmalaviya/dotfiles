@@ -110,9 +110,17 @@
     "on-click": "~/.config/waybar/scripts/powerprofile_toggle.sh && pkill -SIGRTMIN+9 waybar"
   },
   "custom/net_speed": {
-    "format": "{}",
+    "format": "{} ",
     "return-type": "json",
     "interval": 1,
     "exec": "~/.config/waybar/scripts/net_speed.sh"
+  },
+  "custom/caffeine": {
+    "format": "{} ",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/caffeine_status.sh",
+    "interval": 1,
+    "on-click": "~/.config/waybar/scripts/toggle_caffeine.sh",
+    "tooltip": true
   }
 }
