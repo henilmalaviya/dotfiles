@@ -3,11 +3,11 @@
 state_file="/tmp/waybar_caffeine_state"
 
 if [[ -f "$state_file" ]]; then
-    # Disable caffeine (reenable hypridle)
-    pkill -SIGCONT hypridle
+    # Disable caffeine (restart hypridle)
+    hypridle &
     rm "$state_file"
 else
-    # Enable caffeine (pause hypridle)
-    pkill -SIGSTOP hypridle
+    # Enable caffeine (kill hypridle)
+    pkill hypridle
     touch "$state_file"
 fi
