@@ -22,8 +22,9 @@
     "tray"
   ],
   "clock": {
-    "format": "<span foreground='#f5c2e7' size='10000' > </span>{:%a %d %H:%M}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    "format": "<span foreground='#f5c2e7' size='10000' > </span>{:%a %d %H:%M:%S}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "interval": 1
   },
   "battery": {
     "states": {
