@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# === Configuration ===
+PASSCODE="$CODE_PASSCODE"
+ORIGIN="$CODE_ORIGIN"
+ENDPOINT="/api/code"
+
+# === Validate required environment variables ===
+if [ -z "$PASSCODE" ]; then
+  echo "Error: CODE_PASSCODE environment variable is not set."
+  exit 1
+fi
+
+if [ -z "$ORIGIN" ]; then
+  echo "Error: CODE_ORIGIN environment variable is not set."
+  exit 1
+fi
+
+# === Initialize flags ===
+NOTIFY=false
+POSITIONAL=()
+
+# === Parse arguments manually ===
+for arg in "$@"; do
+  case "$arg" in
+    -n)
+      NOTIFY=true
+      ;;
+    -*)
+      echo "Invalid option: $arg"
+      exit 1
+      ;;
+    *)
+      POSITIONAL+=("$arg")
+      ;;
+  esac
+done
+
+# === Extract CODE ===
+if [ ${#POSITIONAL[@]} -eq 0 ]; then
+  echo "Usage: $0 [-n] <code>"
+  exit 1
+fi
+
+RAW_CODE="${POSITIONAL[0]}"
+CODE=$(echo "$RAW_CODE" | tr '[:lower:]' '[:upper:]')
+
+# === Build full URL ===
+URL="${ORIGIN}${ENDPOINT}"
+if $NOTIFY; then
+  URL="${URL}?notify=1"
+fi
+
+# === Send POST request ===
+curl -s -X POST "$URL" \
+  -H "Content-Type: application/json" \
+  -d "{\"passcode\":\"$PASSCODE\",\"code\":\"$CODE\"}"

@@ -12,3 +12,9 @@ source $HOME/.config/zshrc/aliases.zsh
 
 # installed programs specific configuration
 [ -f $HOME/.config/zshrc/programs.zsh ] && source $HOME/.config/zshrc/programs.zsh
+
+# environment variables
+[ -f $HOME/.config/zshrc/env.zsh ] && source $HOME/.config/zshrc/env.zsh
+
+# local aliases
+[ -f $HOME/.config/zshrc/aliases_local.zsh ] && source $HOME/.config/zshrc/aliases_local.zsh
