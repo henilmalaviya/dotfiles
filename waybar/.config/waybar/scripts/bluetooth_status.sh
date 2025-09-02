@@ -4,7 +4,7 @@ ICON=""
 MAX_LENGTH=10
 
 # Get all connected devices (MAC addresses)
-CONNECTED_DEVICES=$(bluetoothctl devices | awk '{print $2}' | grep -E '^([0-9A-F]{2}:){5}[0-9A-F]{2}$')
+CONNECTED_DEVICES=$(bluetoothctl devices Connected | awk '{print $2}' | grep -E '^([0-9A-F]{2}:){5}[0-9A-F]{2}$')
 
 DISPLAY_TEXT="$ICON"
 
