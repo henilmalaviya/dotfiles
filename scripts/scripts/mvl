@@ -1,0 +1,14 @@
+#!/bin/bash
+
+LATEST_FILE=$(ls -t ~/Downloads | head -n1)
+
+if [ -z "$LATEST_FILE" ]; then
+  echo "No files found in ~/Downloads"
+  exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Latest file in ~/Downloads: $LATEST_FILE"
+else
+  mv -v ~/Downloads/"$LATEST_FILE" "$1"
+fi
