@@ -1,3 +1,4 @@
 programs.zsh
 env.zsh
 aliases_local.zsh
+local_scripts/*
