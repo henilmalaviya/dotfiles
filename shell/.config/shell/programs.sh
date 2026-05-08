@@ -1,0 +1,1 @@
+[[ -f "$HOME/.config/shell/programs_local.sh" ]] && source "$HOME/.config/shell/programs_local.sh"
