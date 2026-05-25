@@ -1,127 +1,145 @@
 {
-  "position": "bottom",
-  "modules-left": [
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
-    ""
-  ],
-  "modules-right": [
-    "custom/net_speed",
-    "cpu",
-    "memory",
-    "backlight",
-    "network",
-    "pulseaudio",
-    "battery",
-    "custom/powerprofile",
-    "clock",
-    "custom/caffeine",
-    "custom/bluetooth",
-    "custom/notifications",
-    "tray"
-  ],
-  "clock": {
-    "format": "<span foreground='#f5c2e7' size='10000' > </span>{:%a %d %H:%M:%S}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "interval": 1
-  },
-  "battery": {
-    "states": {
-      "warning": 20,
-      "critical": 15
-    },
-    "format": "<span size='10000' foreground='#a6e3a1'>{icon} </span>{capacity}%",
-    "format-warning": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{capacity}%",
-    "format-critical": "<span size='10000' foreground='#E38C8F'>{icon} </span>{capacity}%",
-    "format-charging": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-plugged": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-alt": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{time}",
-    "format-full": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
-    "format-icons": [
-      " ",
-      " ",
-      " ",
-      " ",
-      " "
+    "position": "bottom",
+    "modules-left": [
+        "hyprland/workspaces"
     ],
-    "tooltip-format": "{time}"
-  },
-  "network": {
-    "format-wifi": "<span size='10000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='10000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='10000' foreground='#f5e0dc'></span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
-    "on-click": "kitty nmtui"
-  },
-  "pulseaudio": {
-    "format": "<span size='10000' >{icon} </span>{volume}%",
-    "format-muted": " ",
-    "format-icons": {
-      "default": [
-        " ",
-        " ",
-        " "
-      ]
+    "modules-center": [
+        ""
+    ],
+    "modules-right": [
+        "privacy",
+        "custom/net_speed",
+        "cpu",
+        "memory",
+        "backlight",
+        "network",
+        "pulseaudio",
+        "battery",
+        "custom/powerprofile",
+        "clock",
+        "custom/caffeine",
+        "custom/bluetooth",
+        "custom/notifications",
+        "tray"
+    ],
+    "clock": {
+        "format": "<span foreground='#f5c2e7' size='10000' > </span>{:%a %d %H:%M:%S}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "interval": 1
     },
-    "on-click": "pavucontrol"
-  },
-  "cpu": {
-    "format": "  {usage}%",
-    "tooltip": false
-  },
-  "memory": {
-    "format": "  {}%"
-  },
-  "backlight": {
-    "format": "{icon}{percent}%",
-    "format-icons": [
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " "
-    ]
-  },
-  "tray": {
-    "spacing": 10
-  },
-  "custom/notifications": {
-    "format": " ",
-    "tooltip": false,
-    "on-click": "swaync-client -t"
-  },
-  "custom/bluetooth": {
-    "format": "{} ",
-    "return-type": "json",
-    "interval": 5,
-    "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
-    "on-click": "blueberry"
-  },
-  "custom/powerprofile": {
-    "format": "{} ",
-    "return-type": "json",
-    "signal": 9,
-    "exec": "~/.config/waybar/scripts/powerprofile_status.sh",
-    "on-click": "~/.config/waybar/scripts/powerprofile_toggle.sh && pkill -SIGRTMIN+9 waybar"
-  },
-  "custom/net_speed": {
-    "format": "{} ",
-    "return-type": "json",
-    "interval": 1,
-    "exec": "~/.config/waybar/scripts/net_speed.sh"
-  },
-  "custom/caffeine": {
-    "format": "{} ",
-    "return-type": "json",
-    "exec": "~/.config/waybar/scripts/caffeine_status.sh",
-    "interval": 1,
-    "on-click": "~/.config/waybar/scripts/toggle_caffeine.sh",
-    "tooltip": true
-  }
+    "battery": {
+        "states": {
+            "warning": 20,
+            "critical": 15
+        },
+        "format": "<span size='10000' foreground='#a6e3a1'>{icon} </span>{capacity}%",
+        "format-warning": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{capacity}%",
+        "format-critical": "<span size='10000' foreground='#E38C8F'>{icon} </span>{capacity}%",
+        "format-charging": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+        "format-plugged": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+        "format-alt": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{time}",
+        "format-full": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ],
+        "tooltip-format": "{time}"
+    },
+    "network": {
+        "format-wifi": "<span size='10000' foreground='#f5e0dc'>  </span>{essid}",
+        "format-ethernet": "<span size='10000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "<span size='10000' foreground='#f5e0dc'></span>Disconnected",
+        "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+        "on-click": "kitty nmtui"
+    },
+    "pulseaudio": {
+        "format": "<span size='10000' >{icon} </span>{volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {}%"
+    },
+    "backlight": {
+        "format": "{icon}{percent}%",
+        "format-icons": [
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
+        ]
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "custom/notifications": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "swaync-client -t"
+    },
+    "custom/bluetooth": {
+        "format": "{} ",
+        "return-type": "json",
+        "interval": 5,
+        "exec": "~/.config/waybar/scripts/bluetooth_status.sh",
+        "on-click": "blueberry"
+    },
+    "custom/powerprofile": {
+        "format": "{} ",
+        "return-type": "json",
+        "signal": 9,
+        "exec": "~/.config/waybar/scripts/powerprofile_status.sh",
+        "on-click": "~/.config/waybar/scripts/powerprofile_toggle.sh && pkill -SIGRTMIN+9 waybar"
+    },
+    "custom/net_speed": {
+        "format": "{} ",
+        "return-type": "json",
+        "interval": 1,
+        "exec": "~/.config/waybar/scripts/net_speed.sh"
+    },
+    "custom/caffeine": {
+        "format": "{} ",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/caffeine_status.sh",
+        "interval": 1,
+        "on-click": "~/.config/waybar/scripts/toggle_caffeine.sh",
+        "tooltip": true
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    }
 }
