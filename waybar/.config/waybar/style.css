@@ -117,3 +117,23 @@ button:hover {
   font-size: 14px;
   padding: 0 10px;
 }
+
+#custom-recorder.recording {
+  color: @red;
+  font-size: 24px;
+  margin-right: 10px;
+  margin-top: -3px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

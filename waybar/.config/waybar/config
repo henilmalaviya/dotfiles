@@ -16,6 +16,7 @@
         "pulseaudio",
         "battery",
         "custom/powerprofile",
+        "custom/recorder",
         "clock",
         "custom/caffeine",
         "custom/bluetooth",
@@ -124,6 +125,13 @@
         "interval": 1,
         "on-click": "~/.config/waybar/scripts/toggle_caffeine.sh",
         "tooltip": true
+    },
+    "custom/recorder": {
+        "format": "{}",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 8,
+        "exec": "~/.config/waybar/scripts/recorder_status.sh"
     },
     "privacy": {
         "icon-spacing": 4,
