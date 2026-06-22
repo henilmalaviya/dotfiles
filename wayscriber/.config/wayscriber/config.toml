@@ -160,10 +160,10 @@ show_marker_opacity_section = false
 context_aware_ui = true
 show_preset_toasts = true
 show_tool_preview = false
-top_offset = 213.0
-top_offset_y = 17.25390625
-side_offset = 67.86328125
-side_offset_x = 11.7734375
+top_offset = 0.32421875
+top_offset_y = 7.375
+side_offset = -8.51953125
+side_offset_x = -4.63671875
 force_inline = false
 
 [ui.toolbar.mode_overrides.simple]
