@@ -23,4 +23,4 @@ case "$PROFILE" in
         ;;
 esac
 
-echo "{\"text\": \"<span foreground='$COLOR' size='10000'>$ICON </span><span foreground='$COLOR'>$NAME</span>\", \"tooltip\": \"Current power profile: $NAME\"}" 
+echo "{\"text\": \"<span foreground='$COLOR'>$ICON </span><span foreground='$COLOR'>$NAME</span>\", \"tooltip\": \"Current power profile: $NAME\"}" 

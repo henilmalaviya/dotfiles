@@ -24,7 +24,7 @@
         "tray"
     ],
     "clock": {
-        "format": "<span foreground='#f5c2e7' size='10000' > </span>{:%a %d %H:%M:%S}",
+        "format": "<span foreground='#f5c2e7'> </span>{:%a %d %H:%M:%S}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "interval": 1
     },
@@ -33,13 +33,13 @@
             "warning": 20,
             "critical": 15
         },
-        "format": "<span size='10000' foreground='#a6e3a1'>{icon} </span>{capacity}%",
-        "format-warning": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{capacity}%",
-        "format-critical": "<span size='10000' foreground='#E38C8F'>{icon} </span>{capacity}%",
-        "format-charging": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
-        "format-plugged": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
-        "format-alt": "<span size='10000' foreground='#B1E3AD'>{icon} </span>{time}",
-        "format-full": "<span size='10000' foreground='#B1E3AD'> </span>{capacity}%",
+        "format": "<span foreground='#a6e3a1'>{icon} </span>{capacity}%",
+        "format-warning": "<span foreground='#B1E3AD'>{icon} </span>{capacity}%",
+        "format-critical": "<span foreground='#E38C8F'>{icon} </span>{capacity}%",
+        "format-charging": "<span foreground='#B1E3AD'> </span>{capacity}%",
+        "format-plugged": "<span foreground='#B1E3AD'> </span>{capacity}%",
+        "format-alt": "<span foreground='#B1E3AD'>{icon} </span>{time}",
+        "format-full": "<span foreground='#B1E3AD'> </span>{capacity}%",
         "format-icons": [
             " ",
             " ",
@@ -50,15 +50,15 @@
         "tooltip-format": "{time}"
     },
     "network": {
-        "format-wifi": "<span size='10000' foreground='#f5e0dc'>  </span>{essid}",
-        "format-ethernet": "<span size='10000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+        "format-wifi": "<span foreground='#f5e0dc'>  </span>{essid}",
+        "format-ethernet": "<span foreground='#f5e0dc'>󰤭  </span> Disconnected",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "<span size='10000' foreground='#f5e0dc'></span>Disconnected",
+        "format-disconnected": "<span foreground='#f5e0dc'></span>Disconnected",
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
         "on-click": "kitty nmtui"
     },
     "pulseaudio": {
-        "format": "<span size='10000' >{icon} </span>{volume}%",
+        "format": "<span>{icon} </span>{volume}%",
         "format-muted": " ",
         "format-icons": {
             "default": [
