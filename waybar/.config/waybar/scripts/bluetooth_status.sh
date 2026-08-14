@@ -27,7 +27,7 @@ else
         fi
     done
 
-    FINAL_TEXT="$ICON  $(printf '%s, ' "${DEVICES_ARRAY[@]}")"
+    FINAL_TEXT="$ICON $(printf '%s, ' "${DEVICES_ARRAY[@]}")"
     FINAL_TEXT="${FINAL_TEXT%, }"  # Remove trailing comma and space
 
     FINAL_TOOLTIP="$(printf '%s\\n' "${TOOLTIP_ARRAY[@]}")"

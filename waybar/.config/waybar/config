@@ -41,17 +41,17 @@
         "format-alt": "<span foreground='#B1E3AD'>{icon} </span>{time}",
         "format-full": "<span foreground='#B1E3AD'> </span>{capacity}%",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            "",
+            "",
+            "",
+            "",
+            ""
         ],
         "tooltip-format": "{time}"
     },
     "network": {
-        "format-wifi": "<span foreground='#f5e0dc'>  </span>{essid}",
-        "format-ethernet": "<span foreground='#f5e0dc'>󰤭  </span> Disconnected",
+        "format-wifi": "<span foreground='#f5e0dc'> </span>{essid}",
+        "format-ethernet": "<span foreground='#f5e0dc'>󰤭 </span>Disconnected",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "<span foreground='#f5e0dc'></span>Disconnected",
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
@@ -62,32 +62,32 @@
         "format-muted": " ",
         "format-icons": {
             "default": [
-                " ",
-                " ",
-                " "
+                "",
+                "",
+                ""
             ]
         },
         "on-click": "pavucontrol"
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "  {}%"
+        "format": " {}%"
     },
     "backlight": {
         "format": "{icon}{percent}%",
         "format-icons": [
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " ",
-            " "
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
     },
     "tray": {
