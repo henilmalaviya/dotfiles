@@ -1,0 +1,12 @@
+[Unit]
+Description=WayVNC Remote Desktop Server (Dotfiles)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'while true; do wayvnc; sleep 3; done'
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=default.target

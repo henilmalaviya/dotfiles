@@ -1,0 +1,12 @@
+[Unit]
+Description=OpenWhispr Voice Dictation Daemon (Dotfiles)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=openwhispr --hidden
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=default.target

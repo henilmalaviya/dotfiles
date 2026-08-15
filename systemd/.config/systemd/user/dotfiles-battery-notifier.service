@@ -1,0 +1,12 @@
+[Unit]
+Description=Battery Level Notifier Daemon (Dotfiles)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=battery-notifier
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target

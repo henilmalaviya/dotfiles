@@ -1,0 +1,12 @@
+[Unit]
+Description=Hyprland Idle Daemon (Dotfiles)
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -c 'rm -f /tmp/waybar_caffeine_state && hypridle'
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=default.target
