@@ -52,7 +52,7 @@ bind_mod("escape", hl.dsp.exec_cmd("hyprpicker -f hex -a -q"))
 bind_mod("k", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/toggle-dpms.sh"))
 bind_mod("SHIFT + V", hl.dsp.exec_cmd("clipcat-menu insert"))
 bind_mod("P", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/float-and-pin.sh"))
-bind_mod("Z", hl.dsp.exec_cmd("dbus-send --session --type=method_call --dest=com.openwhispr.App /com/openwhispr/App com.openwhispr.App.Toggle"))
+bind_mod("Z", hl.dsp.exec_cmd("handy --toggle-transcription"))
 
 -- Hardware & Multimedia Keys (No modifier)
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
