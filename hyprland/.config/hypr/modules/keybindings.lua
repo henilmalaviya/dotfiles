@@ -52,7 +52,11 @@ bind_mod("escape", hl.dsp.exec_cmd("hyprpicker -f hex -a -q"))
 bind_mod("k", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/toggle-dpms.sh"))
 bind_mod("SHIFT + V", hl.dsp.exec_cmd("clipcat-menu insert"))
 bind_mod("P", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/float-and-pin.sh"))
-bind_mod("Z", hl.dsp.exec_cmd("handy --toggle-transcription"))
+-- Mod+Z: Full AI-enhanced dictation via OpenRouter
+bind_mod("Z", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/sun toggle"))
+
+-- Mod+Shift+Z: Raw instant transcription
+bind_mod("SHIFT + Z", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/sun gui"))
 
 -- Hardware & Multimedia Keys (No modifier)
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
