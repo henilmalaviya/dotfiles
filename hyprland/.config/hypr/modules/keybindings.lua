@@ -49,14 +49,30 @@ bind_mod("D", hl.dsp.exec_cmd("wayscriber --daemon-toggle"))
 bind_mod("l", hl.dsp.exec_cmd("hyprlock"))
 bind_mod("f", hl.dsp.window.fullscreen())
 bind_mod("escape", hl.dsp.exec_cmd("hyprpicker -f hex -a -q"))
-bind_mod("k", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/toggle-dpms.sh"))
+
+-- Server Mode Toggle (Super + K)
+bind_mod("k", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/toggle-server-mode.sh"), { locked = true })
+
+-- Lid switch: deactivate server mode and wake display when lid is opened
+hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/toggle-server-mode.sh off"), { locked = true })
+
 bind_mod("SHIFT + V", hl.dsp.exec_cmd("clipcat-menu insert"))
 bind_mod("P", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/hypr/scripts/float-and-pin.sh"))
--- Mod+Z: Full AI-enhanced dictation via OpenRouter
-bind_mod("Z", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/sun toggle"))
+-- Hex Voice Dictation & Utilities (Anoma.ly Hex)
+-- Alt+Space: Hex primary dictation shortcut (tap to toggle)
+hl.bind("ALT + space", hl.dsp.exec_cmd("hex dictation toggle"))
 
--- Mod+Shift+Z: Raw instant transcription
-bind_mod("SHIFT + Z", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/sun gui"))
+-- Mod+Z: Dictation toggle (convenience fallback for previous voice shortcut)
+bind_mod("Z", hl.dsp.exec_cmd("hex dictation toggle"))
+
+-- Mod+Shift+Z: Open Hex window / settings
+bind_mod("SHIFT + Z", hl.dsp.exec_cmd("hex window show"))
+
+-- F9: Hex screen annotation / capture toggle
+hl.bind("F9", hl.dsp.exec_cmd("hex annotate toggle"))
+
+-- Ctrl+Alt+V: Paste last Hex dictation
+hl.bind("CONTROL + ALT + V", hl.dsp.exec_cmd("hex paste-last"))
 
 -- Hardware & Multimedia Keys (No modifier)
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })

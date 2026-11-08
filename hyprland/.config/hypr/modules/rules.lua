@@ -41,3 +41,12 @@ hl.window_rule({
     workspace = "special:bravo",
     move = "50 200",
 })
+
+-- Hex Window Float Rule
+hl.window_rule({
+    name = "hex-float",
+    match = {
+        class = "^(anomaly\\.hex)$",
+    },
+    float = true,
+})
